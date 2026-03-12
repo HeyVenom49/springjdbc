@@ -28,9 +28,14 @@ public class App {
 
         StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
 
-        Student student1 = new Student(3, "Abhinav", "abhinav@test.com", 20);
+        // Student student1 = new Student(3, "Abhinav", "abhinav@test.com", 20);
 
-        int result = studentDao.insert(student1);
+        // int result = studentDao.insert(student1);
+
+        Student student1 = new Student(1, "John", "john@test.com", 19);
+
+        int result = studentDao.update(student1);
+
         System.out.println(result);
         context.close();
     }

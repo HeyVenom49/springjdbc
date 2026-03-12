@@ -27,4 +27,12 @@ public class StudentDaoImpliment implements StudentDao {
         return result;
     }
 
+    @Override
+    public int update(Student student) {
+        String updateQuery = "UPDATE student SET name=?, email=?, age=? WHERE id=? ";
+        int result = this.jdbcTemplate.update(updateQuery, student.getName(), student.getEmail(), student.getAge(),
+                student.getId());
+        return result;
+    }
+
 }
