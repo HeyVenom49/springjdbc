@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.jdbc.dao.StudentDao;
 // import com.spring.jdbc.entities.Student;
+import com.spring.jdbc.entities.Student;
 
 /**
  * Hello world!
@@ -39,9 +40,12 @@ public class App {
         // int result = studentDao.update(student1);
 
         // ! Delete
-        int result = studentDao.delete(1);
+        // int result = studentDao.delete(1);
 
-        System.out.println(result);
+        // ! Select
+        Student student1 = studentDao.getStudent(2);
+
+        System.out.println(student1);
         context.close();
     }
 }
